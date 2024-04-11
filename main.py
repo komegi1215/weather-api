@@ -9,9 +9,8 @@ def home():
 @app.route("/api/v1/<word>")
 def about(word):
     # df = pandas.read_csv("")
-    return {"definition": word.upper(),
-            "word": word
-            }
+    dictionary = {"definition": word.upper(), "word": word}
+    return dictionary
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
